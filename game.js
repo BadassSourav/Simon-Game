@@ -20,7 +20,7 @@ function nextSequence() {
 $(".btn").click(function(){
     const userChosenColour = $(this).attr("id");
     userClickedPattern.push(userChosenColour);
-    console.log(userClickedPattern);
+//     console.log(userClickedPattern);
     animatePress(userChosenColour);
     checkAnswer(userClickedPattern.length-1);
 });
@@ -48,7 +48,7 @@ $(document).keypress(function (e) {
 
 function checkAnswer(currentLevel){
     if(gamePattern[currentLevel]===userClickedPattern[currentLevel]){
-        console.log("Success");
+//         console.log("Success");
         if(userClickedPattern.length === gamePattern.length){
             setTimeout(function(){
                 nextSequence();
@@ -64,7 +64,7 @@ function checkAnswer(currentLevel){
         }, 200);
         $("h1").text("Game Over, Press Any Key to Restart");
         startOver();
-        console.log("Wrong");
+//         console.log("Wrong");
     }
 }
 function startOver(){
